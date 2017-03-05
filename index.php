@@ -55,7 +55,6 @@
 <body data-spy="scroll" data-target=".navbar" data-offset="50">
 
     <!-- Navigation -->
-		<h1>testing lang</h1>
     <nav class="navbar navbar-fixed-top navbar-inverse" style="padding:6px; font-family:mySecondFont; " role="navigation">
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
