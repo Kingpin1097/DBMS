@@ -17,20 +17,13 @@
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/materialize.min.css">
+
     <!--External CSS-->
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="stylesdbms.css">
     <!-- Custom CSS -->
     <style>
-    body {
-        /*padding-top: 70px;*/
-        /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
-    }
-    #div2{
-      background-color: #2196F3;
-    }
-    #div3{
-      background-color: #009688;
-    }
+
     </style>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -85,15 +78,20 @@
     </nav>
 
     <!-- Page Content -->
-    <div class="jumbotron" id="jumbo">
-      <div class="container" style="font-family:myFirstFont">
+    <div class="container-fluid green" style="font-family:myFirstFont">
+      <br />
+      <div class="card-panel white z-depth-3">
+        <div class="container-fluid">
         <div class="row">
-          <div class="col-lg-12 text-center">
+          <div class="col-lg-4" style="padding-top:35px;">
+            <img src="pictures/logo.jpg" class="img-responsive logo" alt="ECMI LOGO" />
+          </div>
+          <div class="col-lg-8 text-center">
             <div class="page-header">
               <h1 class="display-3">ECMI-Sons and Daughters of OFW Program Website</h1>
             </div>
             <footer>
-              <p>
+              <p style="font-size:17px;">
                 The migrant is to be considered, not merely as an instrument of production but as a subject endowed with human dignity -Pope John Paul II
               </p>
             </footer>
@@ -102,16 +100,17 @@
         <!-- /.row -->
       </div>
     </div>
+  </div>
 
     <!--Table Results -->
-    <div class="container-fluid" style="font-family:mySecondFont;" id="div2">
+    <div class="container-fluid green" style="font-family:mySecondFont;" id="div2">
     <br />
     <br />
     <div class="row">
     <div class="col-sm-12">
       <div class="well" align="center">
         <div class="row">
-        <div class="col-sm-5">
+        <div class="col-sm-7">
         <h3 align="left">Baseline Data Summary Results</h3>
         <h3 align="left">Diocese of ________</h3>
         </div>
@@ -455,7 +454,7 @@
     </div>
     </div>
   </div>
-<div class="container-fluid" style="font-family:mySecondFont;" id="div3">
+<div class="container-fluid green" style="font-family:mySecondFont;" id="div3">
     <br />
     <br />
     <div class="row">
@@ -882,8 +881,7 @@
 </div>
 
 
-	<footer>
-	</footer>
+	
     <!-- /.container -->
 
     <!-- jQuery Version 1.11.1 -->
@@ -891,6 +889,7 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/materialize.min.js"></script>
 
 </body>
 

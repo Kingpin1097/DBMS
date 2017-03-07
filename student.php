@@ -18,13 +18,11 @@
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!--External CSS-->
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="stylesdbms.css">
+    <link rel="stylesheet" href="css/materialize.min.css">
     <!-- Custom CSS -->
     <style>
-    body {
-        padding-top: 70px;
-        /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
-    }
+
     </style>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -68,80 +66,82 @@
     </nav>
 
     <!-- Page Content -->
-    <div class="jumbotron" id="jumbo">
-      <div class="container" style="font-family:myFirstFont">
+    <div class="container-fluid green" style="font-family:myFirstFont">
+			<br />
+			<div class="card-panel white z-depth-3">
+				<div class="container-fluid">
         <div class="row">
-          <div class="col-lg-12 text-center">
-            <div class="page-header">
+					<div class="col-lg-4" style="padding-top:35px;">
+						<img src="pictures/logo.jpg" class="img-responsive logo" alt="ECMI LOGO" />
+					</div>
+          <div class="col-lg-8 text-center">
+				    <div class="page-header">
               <h1 class="display-3">ECMI-Sons and Daughters of OFW Program Website</h1>
             </div>
             <footer>
-              <p>
+              <p style="font-size:17px;">
                 The migrant is to be considered, not merely as an instrument of production but as a subject endowed with human dignity -Pope John Paul II
               </p>
             </footer>
           </div>
         </div>
         <!-- /.row -->
-      </div>
-    </div>
+			</div>
+		</div>
+	</div>
 
 	<!--Table Personal Info -->
-	<div class="container-fluid" style="font-family:mySecondFont; background-color:#2196F3;">
-	<div class="row">
-	<div class="col-sm-offset-3 col-sm-6 col-sm-offset-3">
-    <br /><br />
-		<div class="well" align="center">
-		<h3>Personal Information</h3>
-		<table class="table table-hover table-striped" style="background-color:#fff;">
-		<tr>
-        <?php
-        $username = ($_SESSION['username']);
-        $password = ($_SESSION['password']);
-        $stud=mysqli_query($db,"SELECT stud_id,fname,mname,lname,g_level,gender,age
-        FROM student 
-        JOIN account
-        ON student.account_id=account.account_id
-        WHERE account.username='$username' and account.pword='$password'");
-        $stud_det=mysqli_fetch_row($stud);
-        ?>
-	      <td><b>Student ID</b></td>
-		  <td><?php echo $stud_det[0] ?></td>
-	    </tr>
-		<tr>
-	      <td><b>Name</b></td>
-		  <td><?php echo $stud_det[1]." ".$stud_det[2]." ".$stud_det[3] ?></td>
-	    </tr>
-		<tr>
-	      <td><b>Grade Level</b></td>
-		  <td><?php echo $stud_det[4] ?></td>
-	    </tr>
-		<tr>
-	      <td><b>Gender</b></td>
-		  <td><?php echo $stud_det[5] ?></td>
-	    </tr>
-		<tr>
-	      <td><b>Age</b></td>
-		  <td><?php echo $stud_det[6] ?></td>
-	    </tr>
-		</table>
-      <div class="row">
-      <div class="col-sm-offset-5 col-sm-2 col-sm-offset-5">
-        <a href="PTF.php" class="btn btn-primary btn-lg" align="center">Start SDOFP Testing</a>
-      </div>
-    </div>
-    <br />
-	</div>
-	</div>
-	</div>
-</div>
+	<div class="container-fluid green" style="font-family:mySecondFont;">
+	     <div class="row">
+	        <div class="col-sm-offset-1 col-sm-10 col-sm-offset-1">
+            <div class="card-panel white z-depth-3 hoverable">
+            <br /><br />
+		          <h3>Personal Information</h3>
+		            <table class="table table-hover responsive-table table-bordered" style="background-color:#fff;">
+		                <tr>
+                      <?php
+                      $username = ($_SESSION['username']);
+                      $password = ($_SESSION['password']);
+                      $stud=mysqli_query($db,"SELECT stud_id,fname,mname,lname,g_level,gender,age
+                        FROM student
+                        JOIN account
+                        ON student.account_id=account.account_id
+                        WHERE account.username='$username' and account.pword='$password'");
+                        $stud_det=mysqli_fetch_row($stud);
+                        ?>
+	                       <td><b>Student ID</b></td>
+		                       <td><?php echo $stud_det[0] ?></td>
+	                        </tr>
+		                        <tr>
+	                             <td><b>Name</b></td>
+		                             <td><?php echo $stud_det[1]." ".$stud_det[2]." ".$stud_det[3] ?></td>
+	                              </tr>
+		                              <tr>
+	                                   <td><b>Grade Level</b></td>
+		                                   <td><?php echo $stud_det[4] ?></td>
+	                                    </tr>
+		                                     <tr>
+	                                          <td><b>Gender</b></td>
+		                                          <td><?php echo $stud_det[5] ?></td>
+	                                           </tr>
+		                                           <tr>
+	                                                 <td><b>Age</b></td>
+		                                                 <td><?php echo $stud_det[6] ?></td>
+	                                                  </tr>
+		                                                </table>
+                                                    <div class="row">
+                                                      <div class="col-sm-offset-4 col-sm-3 ">
+                                                        <a href="PTF.php" class="btn btn-primary btn-lg" align="center">Start SDOFP Testing</a>
+                                                      </div>
+                                                    </div>
+                                                    <br />
+	                                                 </div>
+	                                                </div>
+                                                </div>
+                                              </div>
 
 <!--Pre-Awareness Button  -->
-<div class="container">
-</div>
-	<footer>
-	<hr>
-	</footer>
+	
     <!-- /.container -->
 
     <!-- jQuery Version 1.11.1 -->
@@ -149,6 +149,7 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/materialize.min.js"></script>
 
 </body>
 

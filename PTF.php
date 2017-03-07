@@ -17,8 +17,10 @@
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/materialize.min.css">
+
     <!--External CSS-->
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="stylesdbms.css">
     <!-- Custom CSS -->
     <style>
 
@@ -65,26 +67,32 @@
     </nav>
 
     <!-- Page Content -->
-    <div class="jumbotron" id="jumbo">
-      <div class="container" style="font-family:myFirstFont">
+    <div class="container-fluid green" style="font-family:myFirstFont">
+			<br />
+			<div class="card-panel white z-depth-3">
+				<div class="container-fluid">
         <div class="row">
-          <div class="col-lg-12 text-center">
-            <div class="page-header">
+					<div class="col-lg-4" style="padding-top:35px;">
+						<img src="pictures/logo.jpg" class="img-responsive logo" alt="ECMI LOGO" />
+					</div>
+          <div class="col-lg-8 text-center">
+				    <div class="page-header">
               <h1 class="display-3">ECMI-Sons and Daughters of OFW Program Website</h1>
             </div>
             <footer>
-              <p>
+              <p style="font-size:17px;">
                 The migrant is to be considered, not merely as an instrument of production but as a subject endowed with human dignity -Pope John Paul II
               </p>
             </footer>
           </div>
         </div>
         <!-- /.row -->
-      </div>
-    </div>
+			</div>
+		</div>
+	</div>
 
 	<!--Pre-Awareness Testing Form -->
-  <div class="container" style="font-family:mySecondFont;" align="center">
+  <div class="container-fluid green" style="font-family:mySecondFont;" align="center">
     <div class="row">
     <div class="col-md-offset-1 col-md-10 col-md-offset-1">
 
@@ -114,7 +122,7 @@
                   $username = ($_SESSION['username']);
                   $password = ($_SESSION['password']);
                   $stud=mysqli_query($db,"SELECT fname,mname,lname,g_level,gender,age
-                  FROM student 
+                  FROM student
                   JOIN account
                   ON student.account_id=account.account_id
                   WHERE account.username='$username' and account.pword='$password'");
@@ -444,12 +452,27 @@
 </p>
 <div class="row">
 <div class="col-md-offset-2 col-md-6 col-md-offset-4">
-<div class="radio" align="left">
-  <label><input type="radio" name="q1" value="a"/>a. galit</label><br />
-  <label><input type="radio" name="q1" value="b"/>b. masaya</label><br />
-  <label><input type="radio" name="q1" value="c"/>c. malungkot</label><br />
-  <label><input type="radio" name="q1" value="d"/>d. walang nararamdaman</label><br />
-  <label><input type="radio" name="q1" value="e"/>e. masama ang loob</label>
+<div class="input-field" align="left">
+  <p>
+    <input id="a1" type="radio" name="q1" value="a" checked>
+    <label for="a1">a. galit</label>
+  </p>
+  <p>
+    <input id="b1" type="radio" name="q1" value="b" checked/>
+    <label for="b1">b. masaya</label>
+  </p>
+  <p>
+    <input id="c1" type="radio" name="q1" value="c" checked/>
+    <label for="c1">c. malungkot</label>
+  </p>
+  <p>
+    <input id="d1" type="radio" name="q1" value="d" checked/>
+    <label for="d1">d. walang nararamdaman</label>
+  </p>
+  <p>
+    <input id="e1" type="radio" name="q1" value="e" checked/>
+    <label for="e1">e. masama ang loob</label>
+  </p>
 </div>
 </div>
 </div>
@@ -460,13 +483,28 @@
 </p>
 <div class="row">
 <div class="col-md-offset-2 col-md-6 col-md-offset-4">
-<div class="radio" align="left">
-  <label><input type="radio" name="q2" value="a"/>a. galit</label><br />
-  <label><input type="radio" name="q2" value="b"/>b. masaya</label><br />
-  <label><input type="radio" name="q2" value="c"/>c. malungkot</label><br />
-  <label><input type="radio" name="q2" value="d"/>d. walang nararamdaman</label><br />
-  <label><input type="radio" name="q2" value="e"/>e. masama ang loob</label>
-</div>
+  <div class="input-field" align="left">
+    <p>
+      <input id="a2" type="radio" name="q2" value="a" checked>
+      <label for="a2">a. galit</label>
+    </p>
+    <p>
+      <input id="b2" type="radio" name="q2" value="b" checked/>
+      <label for="b2">b. masaya</label>
+    </p>
+    <p>
+      <input id="c2" type="radio" name="q2" value="c" checked/>
+      <label for="c2">c. malungkot</label>
+    </p>
+    <p>
+      <input id="d2" type="radio" name="q2" value="d" checked/>
+      <label for="d2">d. walang nararamdaman</label>
+    </p>
+    <p>
+      <input id="e2" type="radio" name="q2" value="e" checked/>
+      <label for="e2">e. masama ang loob</label>
+    </p>
+  </div>
 </div>
 </div>
 <br />
@@ -474,13 +512,28 @@
 3.   Tuwing muling umaalis ang iyong magulang, ano ang iyong pakiramdam?</p>
 <div class="row">
 <div class="col-md-offset-2 col-md-6 col-md-offset-4">
-<div class="radio" align="left">
-  <label><input type="radio" name="q3" value="a"/>a. galit</label><br />
-  <label><input type="radio" name="q3" value="b"/>b. masaya</label><br />
-  <label><input type="radio" name="q3" value="c"/>c. malungkot</label><br />
-  <label><input type="radio" name="q3" value="d"/>d. walang nararamdaman</label><br />
-  <label><input type="radio" name="q3" value="e"/>e. masama ang loob</label>
-</div>
+  <div class="input-field" align="left">
+    <p>
+      <input id="a3" type="radio" name="q3" value="a" checked>
+      <label for="a3">a. galit</label>
+    </p>
+    <p>
+      <input id="b3" type="radio" name="q3" value="b" checked/>
+      <label for="b3">b. masaya</label>
+    </p>
+    <p>
+      <input id="c3" type="radio" name="q3" value="c" checked/>
+      <label for="c3">c. malungkot</label>
+    </p>
+    <p>
+      <input id="d3" type="radio" name="q3" value="d" checked/>
+      <label for="d3">d. walang nararamdaman</label>
+    </p>
+    <p>
+      <input id="e3" type="radio" name="q3" value="e" checked/>
+      <label for="e3">e. masama ang loob</label>
+    </p>
+  </div>
 </div>
 </div>
 <br />
@@ -488,13 +541,29 @@
 4.   Sa papaanong paraan ka nakikipag-usap sa iyong magulang sa ibang bansa?</p>
 <div class="row">
 <div class="col-md-offset-2 col-md-6 col-md-offset-4">
-<div class="radio" align="left">
-  <label><input type="radio" name="q4" value="a"/>a. sulat</label><br />
-  <label><input type="radio" name="q4" value="b"/>b. telepono</label><br />
-  <label><input type="radio" name="q4" value="c"/>c. cellphone</label><br />
-  <label><input type="radio" name="q4" value="d"/>d. voice tape</label><br />
-  <label><input type="radio" name="q4" value="e"/>e. email</label>
-</div>
+
+  <div class="input-field" align="left">
+    <p>
+      <input id="a4" type="radio" name="q4" value="a" checked>
+      <label for="a4">a. sulat</label>
+    </p>
+    <p>
+      <input id="b4" type="radio" name="q4" value="b" checked/>
+      <label for="b4">b. telepono</label>
+    </p>
+    <p>
+      <input id="c4" type="radio" name="q4" value="c" checked/>
+      <label for="c4">c. cellphone</label>
+    </p>
+    <p>
+      <input id="d4" type="radio" name="q4" value="d" checked/>
+      <label for="d4">d. voice tape</label>
+    </p>
+    <p>
+      <input id="e4" type="radio" name="q4" value="e" checked/>
+      <label for="e4">e. email</label>
+    </p>
+  </div>
 </div>
 </div>
 <br />
@@ -503,11 +572,21 @@
 </p>
 <div class="row">
 <div class="col-md-offset-2 col-md-6 col-md-offset-4">
-<div class="radio" align="left">
-  <label><input type="radio" name="q5" value="a"/>a. masasayang balita tungkol sa pag-aaral at ng pamilya</label><br />
-  <label><input type="radio" name="q5" value="b"/>b. di magagandang balita tungkol sap ag-aaral at ng pamilya </label><br />
-  <label><input type="radio" name="q5" value="c"/>c. humihingi na padalhan ng mga gamit at pera</label>
-</div>
+
+  <div class="input-field" align="left">
+    <p>
+      <input id="a5" type="radio" name="q5" value="a" checked>
+      <label for="a5">a. masasayang balita tungkol sa pag-aaral at ng pamilya</label>
+    </p>
+    <p>
+      <input id="b5" type="radio" name="q5" value="b" checked/>
+      <label for="b5">b. di magagandang balita tungkol sap ag-aaral at ng pamilya</label>
+    </p>
+    <p>
+      <input id="c5" type="radio" name="q5" value="c" checked/>
+      <label for="c5">c. humihingi na padalhan ng mga gamit at pera</label>
+    </p>
+  </div>
 </div>
 </div>
 <br />
@@ -516,11 +595,22 @@
 </p>
 <div class="row">
 <div class="col-md-offset-2 col-md-6 col-md-offset-4">
-<div class="radio" align="left">
-  <label><input type="radio" name="q6" value="a"/>a. Walang trabaho sa Pilipinas</label><br/>
-  <label><input type="radio" name="q6" value="b"/>b. Maliit ang kita sa Pilipinas</label><br />
-  <label><input type="radio" name="q6" value="c"/>c. Penitisyon ng kamag-anak</label>
-</div>
+
+  <div class="input-field" align="left">
+    <p>
+      <input id="a6" type="radio" name="q6" value="a" checked>
+      <label for="a6">a. Walang trabaho sa Pilipinas</label>
+    </p>
+    <p>
+      <input id="b6" type="radio" name="q6" value="b" checked/>
+      <label for="b6">b. Maliit ang kita sa Pilipinas</label>
+    </p>
+    <p>
+      <input id="c6" type="radio" name="q6" value="c" checked/>
+      <label for="c6">c. Penitisyon ng kamag-anak</label>
+    </p>
+  </div>
+
 </div>
 </div>
 <br />
@@ -529,11 +619,21 @@
 </p>
 <div class="row">
 <div class="col-md-offset-2 col-md-6 col-md-offset-4">
-<div class="radio" align="left">
-  <label><input type="radio" name="q7" value="a"/>a. Oo</label><br />
-  <label><input type="radio" name="q7" value="b"/>b. Hindi</label><br />
-  <label><input type="radio" name="q7" value="c"/>c. Di-tiyak</label>
-</div>
+
+  <div class="input-field" align="left">
+    <p>
+      <input id="a7" type="radio" name="q7" value="a" checked>
+      <label for="a7">a. Oo</label>
+    </p>
+    <p>
+      <input id="b7" type="radio" name="q7" value="b" checked/>
+      <label for="b7">b. Hindi</label>
+    </p>
+    <p>
+      <input id="c7" type="radio" name="q7" value="c" checked/>
+      <label for="c7">c. Di-tiyak</label>
+    </p>
+  </div>
 </div>
 </div>
 <p>
@@ -541,11 +641,20 @@
 </p>
 <div class="row">
 <div class="col-md-offset-2 col-md-6 col-md-offset-4">
-<div class="radio" align="left">
-  <label><input type="radio" name="q8" value="a"/>a. Oo</label><br/>
-  <label><input type="radio" name="q8" value="b"/>b. Hindi</label><br />
-  <label><input type="radio" name="q8" value="c"/>c. Di-tiyak</label><br />
-</div>
+  <div class="input-field" align="left">
+    <p>
+      <input id="a8" type="radio" name="q8" value="a" checked>
+      <label for="a8">a. Oo</label>
+    </p>
+    <p>
+      <input id="b8" type="radio" name="q8" value="b" checked/>
+      <label for="b8">b. Hindi</label>
+    </p>
+    <p>
+      <input id="c8" type="radio" name="q8" value="c" checked/>
+      <label for="c8">c. Di-tiyak</label>
+    </p>
+  </div>
 </div>
 </div>
 <p>
@@ -553,11 +662,20 @@
 </p>
 <div class="row">
 <div class="col-md-offset-2 col-md-6 col-md-offset-4">
-<div class="radio" align="left">
-  <label><input type="radio" name="q9" value="a"/>a. Oo</label><br />
-  <label><input type="radio" name="q9" value="b"/>b. Hindi</label><br />
-  <label><input type="radio" name="q9" value="c"/>c. Di-tiyak</label><br />
-</div>
+  <div class="input-field" align="left">
+    <p>
+      <input id="a9" type="radio" name="q9" value="a" checked>
+      <label for="a9">a. Oo</label>
+    </p>
+    <p>
+      <input id="b9" type="radio" name="q9" value="b" checked/>
+      <label for="b9">b. Hindi</label>
+    </p>
+    <p>
+      <input id="c9" type="radio" name="q9" value="c" checked/>
+      <label for="c9">c. Di-tiyak</label>
+    </p>
+  </div>
 </div>
 </div>
 
@@ -575,9 +693,7 @@
 	</div>
 </div>
 </div>
-	<footer>
-	<hr>
-	</footer>
+	
     <!-- /.container -->
 
     <!-- jQuery Version 1.11.1 -->
@@ -585,5 +701,7 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/materialize.min.js"></script>
+
 </body>
 </html>
