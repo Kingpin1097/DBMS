@@ -1,0 +1,60 @@
+#login-dp{
+min-width: 250px;
+padding: 14px 14px 0;
+overflow:hidden;
+background-color:#fff;
+}
+#login-dp .help-block{
+    font-size:12px
+}
+#login-dp .bottom{
+    background-color: inherit;
+    border-top:1px solid #ddd;
+    clear:both;
+    padding:14px;
+}
+#jumbo{
+  background-color: #fff;
+}
+#login-dp .form-group {
+    margin-bottom: 10px;
+}
+@(max-width:768px){
+    #login-dp{
+        background-color: inherit;
+        color: #fff;
+    }
+#login-dp .bottom{
+        background-color: inherit;
+        border-top:0 none;
+    }
+}
+@font-face {
+font-family: myFirstFont;
+src: url(fonts/Traffolight.otf);
+}
+@font-face {
+  font-family: mySecondFont;
+  src: url(fonts/ABeeZee.ttf);
+}
+.logo {
+  margin:0 auto;
+  background-color:#004D40;
+}
+body {
+    padding-top: 50px;
+    /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+}
+#div2{
+padding-top:50px;
+padding-bottom: 50px;
+background-color:#fff;
+font-family: verdana;
+}
+
+#div3{
+  padding-top:50px;
+  padding-bottom: 50px;
+  background-color:#fff;
+  font-family: roboto;
+}

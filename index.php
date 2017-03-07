@@ -18,15 +18,12 @@
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!--External CSS-->
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="stylesdbms.css">
 		<link rel="stylesheet" href="css/materialize.min.css">
 
     <!-- Custom CSS -->
     <style>
-    body {
-        padding-top: 50px;
-        /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
-    }
+
 
     #div2{
     padding-top:50px;
@@ -42,10 +39,7 @@
       background-color:#fff;
       font-family: roboto;
     }
-		.logo {
-			margin:0 auto;
-			background-color:#004D40;
-		}
+
     </style>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -119,7 +113,7 @@
 			<div class="card-panel white z-depth-3">
 				<div class="container-fluid">
         <div class="row">
-					<div class="col-lg-4" style="padding-top:30px;">
+					<div class="col-lg-4" style="padding-top:35px;">
 						<img src="pictures/logo.jpg" class="img-responsive logo" alt="ECMI LOGO" />
 					</div>
           <div class="col-lg-8 text-center">
@@ -138,69 +132,58 @@
 		</div>
 	</div>
 
-    <div class="container-fluid green z-depth-2" id="div1">
-			<div class="row">
-				<div class="col-md-offset-1 col-md-10 col-md-offset-1">
-
-					<div class="carousel slide" data-ride="carousel" id="pictures">
-						<ol class="carousel-indicators">
-							<li data-target="#pictures" data-slide-to="0" class="active">
-							</li>
-							<li data-target="#pictures" data-slide-to="1">
-							</li>
-							<li data-target="#pictures" data-slide-to="2">
-							</li>
-							<li data-target="#pictures" data-slide-to="3">
-							</li>
-						</ol>
-						<br /> <br />
-						<div class="carousel-inner">
-							<div class="item active">
-								<img src="pictures/a.jpg" alt="SDOFP_1" />
-								<div class="carousel-caption">
-									<h2>Sample Picture</h2>
-									<p>Description
-									</p>
-								</div>
-							</div>
-							<div class="item">
-								<img src="pictures/b.jpg" alt="SDOFP_2" />
-								<div class="carousel-caption">
-									<h2>Sample Picture</h2>
-									<p>Description
-									</p>
-								</div>
-							</div>
-							<div class="item">
-								<img src="pictures/c.jpg" alt="SDOFP_3" />
-								<div class="carousel-caption">
-									<h2>Sample Picture</h2>
-									<p>Description
-									</p>
-								</div>
-							</div>
-							<div class="item">
-								<img src="pictures/d.jpg" alt="SDOFP_4" />
-								<div class="carousel-caption">
-									<h2>Sample Picture</h2>
-									<p>Description
-									</p>
-								</div>
-							</div>
-							<a href="#pictures" class="left carousel-control" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
-							<a href="#pictures" class="right carousel-control" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
-						</div>
-					</div>
-				</div>
-				</div>
-			</div>
-		<div class="container-fluid green z-depth-3">
+	<div class="container-fluid green">
+		<h1 align="center" style="font-family:roboto; color:white;">Picture Gallery</h1>
 		<div class="row">
-			<div class="col-md-offset-1 col-md-10 col-md-offset-1">
+	  <div class="col-md-3">
+	    <div class="thumbnail">
+	      <a href="pictures/a.jpg">
+	        <img src="pictures/a.jpg" alt="Lights" style="width:100%">
+	        <div class="caption">
+	          <p>Sample Pictures</p>
+	        </div>
+	      </a>
+	    </div>
+	  </div>
+	  <div class="col-md-3">
+	    <div class="thumbnail">
+	      <a href="pictures/b.jpg">
+	        <img src="pictures/b.jpg" alt="Nature" style="width:100%">
+	        <div class="caption">
+	          <p>Sample Pictures</p>
+	        </div>
+	      </a>
+	    </div>
+	  </div>
+	  <div class="col-md-3">
+	    <div class="thumbnail">
+	      <a href="pictures/c.jpg">
+	        <img src="pictures/c.jpg" alt="Fjords" style="width:100%">
+	        <div class="caption">
+	          <p>Sample Pictures</p>
+	        </div>
+	      </a>
+	    </div>
+	  </div>
+		<div class="col-md-3">
+	    <div class="thumbnail">
+	      <a href="pictures/d.jpg">
+	        <img src="pictures/d.jpg" alt="Nature" style="width:100%">
+	        <div class="caption">
+	          <p>Sample Pictures</p>
+	        </div>
+	      </a>
+	    </div>
+	  </div>
+	</div>
+
+		<div class="container-fluid green">
+		<div class="row">
+			<div class="col-md-offset-2 col-md-8 col-md-offset-2">
 				<div class="card-panel hoverable" id="div2">
 					<h2 style="color:#000">ABOUT US</h2>
 					<br />
-					<p class="flow-text" style="font-family:roboto; font-size:20px;">
+					<p class="flow-text" style="font-family:roboto; font-size:17px;">
 						The beginnings of the Catholic Bishops’ Conference of the Philippines may be traced back to 15 February 1945 , when the Catholic Welfare Organization (CWO) was created. Back then, it had 17 members.
 
 						The beginnings of the Episcopal Commission for the Pastoral Care of Migrants and Itinerant People (ECMI) may be traced back to the year 1955, when the Episcopal Commission-Committee on Emigration reported to the CWO the situation of Filipinos in USA, Hawaii, and Guam, and the corresponding actions taken by the church.
@@ -231,9 +214,9 @@
 			</div>
 			</div>
 		</div>
-	<div class="container-fluid green z-depth-3">
-		<div class="row>">
-			<div class="col-md-offset-1 col-md-10 col-md-offset-1">
+	<div class="container-fluid green">
+		<div class="row">
+			<div class="col-md-offset-2 col-md-8 col-md-offset-2">
 				<div class="card-panel hoverable" id="div3">
 					<h2 style="color:#000">Contact Us</h2>
 					<br/>
@@ -255,13 +238,11 @@
 					</div>
 				</div>
 			</div>
+
 		</div>
 			</div>
 		</div>
 
-	  <footer>
-      <hr/>
-	  </footer>
     <!-- /.container -->
 
     <!-- jQuery Version 1.11.1 -->
